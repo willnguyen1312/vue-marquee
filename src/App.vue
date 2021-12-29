@@ -1,5 +1,12 @@
+
+<script setup lang="ts">
+import { ref } from 'vue'
+import { useRafFn } from '@vueuse/core'
+
+const count = ref(0)
+const { pause, resume } = useRafFn(() => count.value += 1)
+</script>
+
 <template>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <div>Count: {{ count }}</div>
 </template>
