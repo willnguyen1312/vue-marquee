@@ -11,7 +11,7 @@ useRafFn(() => {
   const bound = list.value?.clientWidth;
 
   if (bound) {
-    const newValue = translateX.value + (isHover.value ? 0.75 : 1.5);
+    const newValue = translateX.value + (isHover.value ? 0.5 : 1.5);
 
     if (newValue > bound) {
       translateX.value = 0;
