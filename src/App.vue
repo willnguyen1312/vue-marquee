@@ -44,7 +44,10 @@ const handleMouseLeave = () => {
       @mouseleave="handleMouseLeave"
       class="overflow-hidden w-full md:w-8/12 cursor-pointer"
     >
-      <div class="flex" :style="{ transform: `translateX(-${translateX}px)` }">
+      <div
+        class="flex will-change-transform"
+        :style="{ transform: `translateX(-${translateX}px)` }"
+      >
         <div ref="list" class="flex flex-shrink-0 py-4 relative">
           <img
             v-for="image in images"
