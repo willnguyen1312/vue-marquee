@@ -48,7 +48,7 @@ const images: { src: string; id: string }[] = Array.from(
   <div class="m-auto flex flex-col items-center px-4">
     <h1 class="my-10 text-4xl font-bold">Demo Marquee</h1>
     <div
-      @pointerenter="isHover = true"
+      @pointerover="isHover = true"
       @pointerleave="isHover = false"
       class="overflow-hidden w-full md:w-8/12 cursor-pointer"
     >
