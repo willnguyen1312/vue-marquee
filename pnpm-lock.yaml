@@ -2,8 +2,8 @@ lockfileVersion: 5.3
 
 specifiers:
   '@vitejs/plugin-vue': ^2.0.1
-  '@vueuse/components': ^7.4.2
-  '@vueuse/core': ^7.4.2
+  '@vueuse/components': ^7.4.3
+  '@vueuse/core': ^7.4.3
   autoprefixer: ^10.4.1
   nanoid: ^3.1.30
   postcss: ^8.4.5
@@ -14,8 +14,8 @@ specifiers:
   vue-tsc: ^0.30.1
 
 dependencies:
-  '@vueuse/components': 7.4.2_vue@3.2.26
-  '@vueuse/core': 7.4.2_vue@3.2.26
+  '@vueuse/components': 7.4.3_vue@3.2.26
+  '@vueuse/core': 7.4.3_vue@3.2.26
   autoprefixer: 10.4.1_postcss@8.4.5
   nanoid: 3.1.30
   postcss: 8.4.5
@@ -254,19 +254,19 @@ packages:
   /@vue/shared/3.2.26:
     resolution: {integrity: sha512-vPV6Cq+NIWbH5pZu+V+2QHE9y1qfuTq49uNWw4f7FDEeZaDU2H2cx5jcUZOAKW7qTrUS4k6qZPbMy1x4N96nbA==}
 
-  /@vueuse/components/7.4.2_vue@3.2.26:
-    resolution: {integrity: sha512-h5c+fq6vt2vpyhxY8U87sca7HwH3vFdbXQB6rECXJNc74ZGIwWrOKCYWJmWBGaDD6Yh2IgooEsxbnvmKwpSeBA==}
+  /@vueuse/components/7.4.3_vue@3.2.26:
+    resolution: {integrity: sha512-KMAd+pCMlLw5oFz5Nsmru7WorMjZG9fZ2RZUAIfPus7AOQwXNuRAN3bEyqDkaXBRr9KWghef1q2RFQ+xHzrKMQ==}
     dependencies:
-      '@vueuse/core': 7.4.2_vue@3.2.26
-      '@vueuse/shared': 7.4.2_vue@3.2.26
+      '@vueuse/core': 7.4.3_vue@3.2.26
+      '@vueuse/shared': 7.4.3_vue@3.2.26
       vue-demi: 0.12.1_vue@3.2.26
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
     dev: false
 
-  /@vueuse/core/7.4.2_vue@3.2.26:
-    resolution: {integrity: sha512-VV0Z6E+Ldrc2iA5Jezk2Q5os/zlOjZ9dInkRxiHivyFENRZRHR74lx4GrZlaVvnQhJcq9HavQGZWlt7IHDK+kg==}
+  /@vueuse/core/7.4.3_vue@3.2.26:
+    resolution: {integrity: sha512-OflPLlQ7eqaDJgKYw9DpRCbtfpkFkg1EqHFq7CFrbIEElB39wIfB9ccNypCar8e5KRDrAbOJLIOOvDZO6aC2Gg==}
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
@@ -276,13 +276,13 @@ packages:
       vue:
         optional: true
     dependencies:
-      '@vueuse/shared': 7.4.2_vue@3.2.26
+      '@vueuse/shared': 7.4.3_vue@3.2.26
       vue: 3.2.26
       vue-demi: 0.12.1_vue@3.2.26
     dev: false
 
-  /@vueuse/shared/7.4.2_vue@3.2.26:
-    resolution: {integrity: sha512-2O6Imas/Nx9RSrg03q2x/3Bbn9LGg8W3DeXZKgYa6hB1H3i2PbfLfXHqZop5e4ltNrZ3bxd3v7obA0WPkWbi5Q==}
+  /@vueuse/shared/7.4.3_vue@3.2.26:
+    resolution: {integrity: sha512-tNOCbpD3uZyzxNuw2GX5LTVkMB//IZ7GS452F7TwlY07aIoGjPgixi2Yfk/xSR4CcC9iU56zprZW33aEGj1O1Q==}
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
