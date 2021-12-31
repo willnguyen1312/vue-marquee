@@ -4,7 +4,7 @@ import { useRafFn, useToggle } from "@vueuse/core";
 import { nanoid } from "nanoid";
 
 const translateX = ref(0);
-const direction = ref<"left" | "right">("right");
+const direction = ref<"left" | "right">("left");
 
 const list = ref<HTMLDivElement>();
 const [isHover, toggleIsHover] = useToggle(false);
