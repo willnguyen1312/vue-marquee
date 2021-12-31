@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
 import { useRafFn, useToggle } from "@vueuse/core";
 import { nanoid } from "nanoid";
 
@@ -7,16 +7,22 @@ const translateX = ref(0);
 const list = ref<HTMLDivElement>();
 const [isHover, toggleIsHover] = useToggle(false);
 
+const pixelsMovedPerFrameOnIdle = 1.5;
+const pixelsMovedPerFrameOnHover = 0.5;
+
 useRafFn(() => {
   const bound = list.value?.clientWidth;
 
   if (bound) {
-    const newValue = translateX.value + (isHover.value ? 0.5 : 1.5);
+    const pixelsMovedPerFrame = isHover.value
+      ? pixelsMovedPerFrameOnHover
+      : pixelsMovedPerFrameOnIdle;
+    const newTranslateX = translateX.value + pixelsMovedPerFrame;
 
-    if (newValue > bound) {
+    if (newTranslateX > bound) {
       translateX.value = 0;
     } else {
-      translateX.value = newValue;
+      translateX.value = newTranslateX;
     }
   }
 });
@@ -26,11 +32,11 @@ const images: { src: string; id: string }[] = Array.from(
   (_, index) => ({ src: `/${index + 1}.jpeg`, id: nanoid() })
 );
 
-const handleMouseEnter = () => {
+const handlePointerEnter = () => {
   toggleIsHover();
 };
 
-const handleMouseLeave = () => {
+const handlePointerLeave = () => {
   toggleIsHover();
 };
 </script>
@@ -40,8 +46,8 @@ const handleMouseLeave = () => {
     <h1 class="my-10 text-4xl font-bold">Demo Marquee</h1>
 
     <div
-      @mouseenter="handleMouseEnter"
-      @mouseleave="handleMouseLeave"
+      @pointerenter="handlePointerEnter"
+      @pointerleave="handlePointerLeave"
       class="overflow-hidden w-full md:w-8/12 cursor-pointer"
     >
       <div
