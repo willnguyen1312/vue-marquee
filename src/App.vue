@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
-import { useRafFn } from "@vueuse/core";
-import { nanoid } from "nanoid";
+import { ref, computed } from 'vue';
+import { useRafFn } from '@vueuse/core';
+import { nanoid } from 'nanoid';
 
 const translateX = ref(0);
-const direction = ref<"left" | "right">("left");
+const direction = ref<'left' | 'right'>('left');
 
 const list = ref<HTMLDivElement>();
 const isHover = ref(false);
@@ -32,7 +32,7 @@ useRafFn(() => {
 const style = computed(() => {
   const bound = list.value?.clientWidth || 0;
   const newValue =
-    direction.value === "left" ? -translateX.value : translateX.value - bound;
+    direction.value === 'left' ? -translateX.value : translateX.value - bound;
   return {
     transform: `translateX(${newValue}px)`,
   };
@@ -46,7 +46,7 @@ const images: { src: string; id: string }[] = Array.from(
 
 <template>
   <div class="m-auto flex flex-col items-center px-4">
-    <h1 class="my-10 text-4xl font-bold">Demo Marquee</h1>
+    <h1 class="my-10 text-4xl font-bold">🚀 Demo Marquee 🚀</h1>
     <div
       @pointerover="isHover = true"
       @pointerleave="isHover = false"
